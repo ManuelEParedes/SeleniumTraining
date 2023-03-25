@@ -48,12 +48,25 @@ public class MiPrimerTest{
         WebElement demoSite = driver.findElement(By.cssSelector("#site-name"));
         demoSite.click();
         Thread.sleep(3000);
-        */
+
         WebElement demoSite = driver.findElement(By.cssSelector("input[type='text'][name='userName']"));
         demoSite.click();
         demoSite.sendKeys("Manolin");
         Thread.sleep(3000);
 
+        WebElement userName = driver.findElement(By.xpath("//input[@name='userName']"));
+        userName.click();
+        userName.sendKeys("Manolin");
+        Thread.sleep(3000);
+
+        WebElement demoSite = driver.findElement(By.xpath("//a[@title='Home' and text()='Demo Site']"));
+        demoSite.click();
+        Thread.sleep(3000);
+         */
+        WebElement demoSite = driver.findElement(By.xpath("//*[contains(text(),'Demo Site')]"));
+        // el xpath puede ser tambien a[contains(text(),'Demo Site')]
+        demoSite.click();
+        Thread.sleep(3000);
 
     }
 
